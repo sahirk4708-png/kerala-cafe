@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerala Cafe | Nature Fusion • Nuh Mewat (Near Prayas Academy)</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            nature: {
+              kerala: '#022C22',   /* Deep Kerala Palm Emerald */
+              leaf: '#10B981',     /* Tropical Leaf Green */
+              aravalli: '#78350F', /* Earthy Aravalli Stone */
+              terracotta: '#D97706',/* Sun-baked Earth */
+              gold: '#FACC15',     /* Sun Glow */
+              dark: '#010D0B'      /* Deep Forest Dark Background */
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #010D0B;
+      color: #E2E8F0;
+    }
+
+    /* Cinematic Fusion Hero Background with Parallax feel */
+    .fusion-bg-hero {
+      background: 
+        linear-gradient(135deg, rgba(1, 13, 11, 0.85) 0%, rgba(2, 44, 34, 0.75) 50%, rgba(1, 13, 11, 0.95) 100%),
+        url('https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    }
+
+    /* Ultra-Stylized Glassmorphism Cards */
+    .glass-nature-card {
+      background: rgba(2, 44, 34, 0.55);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    .glass-nature-card:hover {
+      border-color: rgba(250, 204, 21, 0.7);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.9), 0 0 30px 0 rgba(16, 185, 129, 0.3);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gradient-nature-text {
+      background: linear-gradient(135deg, #FFFBEB 0%, #FACC15 45%, #34D399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-nature-btn {
+      background: linear-gradient(135deg, #FACC15 0%, #D97706 50%, #059669 100%);
+      transition: all 0.3s ease;
+    }
+
+    .gradient-nature-btn:hover {
+      filter: brightness(1.15);
+      box-shadow: 0 0 25px rgba(250, 204, 21, 0.4);
+    }
+
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="selection:bg-emerald-500 selection:text-black antialiased">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-gradient-to-r from-emerald-950 via-zinc-900 to-emerald-950 border-b border-emerald-500/20 text-xs py-2.5 px-4 text-zinc-300">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-3 py-1 rounded-full font-semibold shadow-inner">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> KERALA VIBES × ARAVALLI HILLS
+        </span>
+        <span class="text-zinc-600 hidden sm:inline">|</span>
+        <span class="truncate"><i class="fa-solid fa-location-dot text-amber-400 mr-1.5"></i> Near Prayas Academy, Nuh, Mewat (Haryana)</span>
+      </div>
+      <div class="flex items-center gap-4 font-medium">
+        <a href="tel:9813632561" class="hover:text-amber-400 transition flex items-center gap-1.5 text-amber-300 font-semibold">
+          <i class="fa-solid fa-phone text-emerald-400"></i> 9813632561
+        </a>
+        <span class="text-zinc-600 hidden md:inline">|</span>
+        <a href="mailto:sahirk4708@gmail.com" class="hover:text-amber-400 transition hidden md:flex items-center gap-1.5 text-zinc-300">
+          <i class="fa-solid fa-envelope text-amber-400"></i> sahirk4708@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="sticky top-0 z-50 bg-nature-dark/90 backdrop-blur-2xl border-b border-emerald-500/20 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 via-emerald-500 to-emerald-950 p-0.5 shadow-xl shadow-emerald-500/20">
+          <div class="w-full h-full bg-nature-dark rounded-[14px] flex items-center justify-center">
+            <i class="fa-solid fa-tree text-emerald-400 text-xl group-hover:rotate-12 transition transform duration-300"></i>
+          </div>
+        </div>
+        <div>
+          <span class="block font-black text-2xl tracking-tight text-white font-serif group-hover:text-amber-300 transition">Kerala Cafe</span>
+          <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-400">Nuh Mewat • Aravalli Range</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-zinc-300">
+        <a href="#elements" class="hover:text-amber-400 transition-colors">Nature Vibe</a>
+        <a href="#menu" class="hover:text-amber-400 transition-colors">Menu & Prices</a>
+        <a href="#owners" class="hover:text-amber-400 transition-colors">Founders</a>
+        <a href="#about" class="hover:text-amber-400 transition-colors">Location</a>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex items-center gap-4">
+        <button onclick="toggleCartDrawer()" class="relative glass-nature-card hover:bg-emerald-900/40 p-3 rounded-2xl transition text-zinc-200 shadow-md">
+          <i class="fa-solid fa-bag-shopping text-lg text-amber-400"></i>
+          <span id="cart-badge" class="absolute -top-1.5 -right-1.5 gradient-nature-btn text-black font-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center border-2 border-nature-dark shadow">0</span>
+        </button>
+
+        <a href="tel:9813632561" class="hidden sm:inline-flex items-center gap-2 gradient-nature-btn text-black font-extrabold text-xs uppercase px-5 py-3 rounded-xl shadow-lg transition transform active:scale-95">
+          <i class="fa-solid fa-phone"></i> Call 9813632561
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-24 px-4 fusion-bg-hero">
+    <div class="relative z-10 max-w-5xl mx-auto text-center space-y-8">
+      
+      <div class="inline-flex items-center gap-2.5 glass-nature-card px-5 py-2 rounded-full border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wide shadow-2xl">
+        <i class="fa-solid fa-bolt text-emerald-400 animate-bounce"></i> Free Delivery Under 5km • Flat ₹5 Tax On Billing
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight font-serif leading-tight">
+        Where Kerala Nature Meets <br>
+        <span class="gradient-nature-text italic font-normal">Aravalli Hills in Nuh</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-zinc-300 text-base sm:text-lg font-normal leading-relaxed">
+        Located right near Prayas Academy. Experience the absolute best fusion of South Indian delicacies, Indo-Chinese flavors, thick shakes, and warm hospitality.
+      </p>
+
+      <!-- Founders Highlight -->
+      <div class="max-w-md mx-auto glass-nature-card p-4 rounded-2xl border-amber-500/40 flex items-center justify-center gap-3 text-center shadow-xl">
+        <div class="w-10 h-10 rounded-full bg-amber-400/10 flex items-center justify-center text-amber-400">
+          <i class="fa-solid fa-crown"></i>
+        </div>
+        <div class="text-left">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-400 block">Founders & Visionaries</span>
+          <span class="text-sm font-black text-white">Alkama Drwl & Er. Saha Maluk Khan</span>
+        </div>
+      </div>
+
+      <!-- Key Info Cards -->
+      <div class="pt-2 max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+        <div class="glass-nature-card p-4 rounded-2xl border-emerald-500/30 text-center">
+          <span class="text-xs text-emerald-300 block font-semibold uppercase tracking-wider">Landmark</span>
+          <span class="text-sm font-bold text-white mt-1 block"><i class="fa-solid fa-graduation-cap text-amber-400 mr-1"></i> Near Prayas Academy</span>
+        </div>
+        <div class="glass-nature-card p-4 rounded-2xl border-emerald-500/30 text-center">
+          <span class="text-xs text-emerald-300 block font-semibold uppercase tracking-wider">Direct Hotline</span>
+          <a href="tel:9813632561" class="text-sm font-bold text-amber-400 mt-1 block hover:underline"><i class="fa-solid fa-phone text-amber-400 mr-1"></i> 9813632561</a>
+        </div>
+        <div class="glass-nature-card p-4 rounded-2xl border-emerald-500/30 text-center">
+          <span class="text-xs text-emerald-300 block font-semibold uppercase tracking-wider">Support Email</span>
+          <a href="mailto:sahirk4708@gmail.com" class="text-xs font-bold text-white mt-1.5 block truncate hover:underline"><i class="fa-solid fa-envelope text-amber-400 mr-1"></i> sahirk4708@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-wrap justify-center gap-4">
+        <a href="#menu" class="gradient-nature-btn text-black font-extrabold text-sm uppercase px-9 py-4 rounded-2xl shadow-2xl hover:scale-105 transition transform">
+          Browse Full Menu & Order
+        </a>
+        <a href="https://maps.google.com/?q=Prayas+Academy+Nuh+Mewat+Haryana" target="_blank" class="glass-nature-card hover:bg-white/10 text-white font-bold text-sm px-8 py-4 rounded-2xl border border-white/20 transition flex items-center gap-2">
+          <i class="fa-solid fa-map-location-dot text-amber-400"></i> Open Map Location
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NATURE ELEMENTS SECTION -->
+  <section id="elements" class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">The Essence of Our Cafe</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-white mt-1">Three Pillars of Kerala Cafe</h2>
+      <p class="text-xs text-zinc-400 mt-2">Harmonizing tropical serenity, rocky mountain heritage, and welcoming Mewati culture.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="glass-nature-card rounded-3xl overflow-hidden group border-emerald-500/30 flex flex-col justify-between">
+        <div>
+          <div class="relative h-60 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80" alt="Kerala Palms" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-nature-dark via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-emerald-950/90 text-emerald-400 text-[10px] font-black px-3 py-1 rounded-full uppercase border border-emerald-500/40">1. Kerala Palms</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white">Tropical Palm Aesthetic</h3>
+            <p class="text-xs text-zinc-300 mt-2 leading-relaxed">Inspired by the soothing green backwaters and refreshing botanical breeze of Kerala.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="glass-nature-card rounded-3xl overflow-hidden group border-emerald-500/30 flex flex-col justify-between">
+        <div>
+          <div class="relative h-60 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Aravalli Hills" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-nature-dark via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-amber-950/90 text-amber-400 text-[10px] font-black px-3 py-1 rounded-full uppercase border border-amber-500/40">2. Aravalli Hills</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white">Rugged Aravalli Heritage</h3>
+            <p class="text-xs text-zinc-300 mt-2 leading-relaxed">Framed by the ancient rocky landscapes of Nuh, creating a unique earthy cafe vibe.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="glass-nature-card rounded-3xl overflow-hidden group border-emerald-500/30 flex flex-col justify-between">
+        <div>
+          <div class="relative h-60 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Student Hangout" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-nature-dark via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-emerald-950/90 text-emerald-300 text-[10px] font-black px-3 py-1 rounded-full uppercase border border-emerald-500/40">3. Nuh Hospitality</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white">The Ultimate Hangout</h3>
+            <p class="text-xs text-zinc-300 mt-2 leading-relaxed">Located near Prayas Academy, serving as the favorite study-break and refreshment hub.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE EXPANDED MENU SECTION -->
+  <section id="menu" class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-white/10 gap-4">
+      <div>
+        <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Freshly Prepared</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-white mt-1">Kerala Cafe Expanded Menu</h2>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-hide text-xs font-semibold">
+        <button onclick="filterCategory('all')" class="cat-btn active gradient-nature-btn text-black px-5 py-2.5 rounded-xl whitespace-nowrap transition shadow">All Items</button>
+        <button onclick="filterCategory('south')" class="cat-btn glass-nature-card hover:border-amber-400/50 text-zinc-300 px-5 py-2.5 rounded-xl whitespace-nowrap transition shadow">South Specials</button>
+        <button onclick="filterCategory('fastfood')" class="cat-btn glass-nature-card hover:border-amber-400/50 text-zinc-300 px-5 py-2.5 rounded-xl whitespace-nowrap transition shadow">Burgers & Fries</button>
+        <button onclick="filterCategory('chinese')" class="cat-btn glass-nature-card hover:border-amber-400/50 text-zinc-300 px-5 py-2.5 rounded-xl whitespace-nowrap transition shadow">Chinese & Momos</button>
+        <button onclick="filterCategory('rolls')" class="cat-btn glass-nature-card hover:border-amber-400/50 text-zinc-300 px-5 py-2.5 rounded-xl whitespace-nowrap transition shadow">Rolls & Sandwich</button>
+        <button onclick="filterCategory('beverages')" class="cat-btn glass-nature-card hover:border-amber-400/50 text-zinc-300 px-5 py-2.5 rounded-xl whitespace-nowrap transition shadow">Tea, Coffee & Shakes</button>
+      </div>
+    </div>
+
+    <!-- Menu Items Grid -->
+    <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Item 1 -->
+      <div class="menu-card south glass-nature-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div>
+          <div class="h-52 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&q=80" alt="Crispy Masala Dosa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-nature-dark/90 backdrop-blur-md text-amber-400 text-xs font-black px-3.5 py-1.5 rounded-xl border border-emerald-500/30 shadow-lg">₹140</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block mb-1">South Special</span>
+            <h3 class="font-extrabold text-lg text-white font-serif">Crispy Masala Dosa</h3>
+            <p class="text-xs text-zinc-300 mt-1.5 leading-relaxed">Crispy rice-crepe stuffed with spiced potato masala, served with coconut chutney & sambar.</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <button onclick="addToCart('Crispy Masala Dosa', 140)" class="w-full gradient-nature-btn text-black font-extrabold text-xs py-3.5 rounded-2xl hover:opacity-95 transition shadow-lg">
+            <i class="fa-solid fa-plus mr-1.5"></i> Add to Order Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="menu-card chinese glass-nature-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div>
+          <div class="h-52 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?auto=format&fit=crop&w=600&q=80" alt="Veg Kurkure Momos" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-nature-dark/90 backdrop-blur-md text-amber-400 text-xs font-black px-3.5 py-1.5 rounded-xl border border-emerald-500/30 shadow-lg">₹110</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest block mb-1">Chinese Corner</span>
+            <h3 class="font-extrabold text-lg text-white font-serif">Crispy Kurkure Momos (8 Pcs)</h3>
+            <p class="text-xs text-zinc-300 mt-1.5 leading-relaxed">Crunchy outer coating stuffed with seasoned veggies, served with spicy red chutney.</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <button onclick="addToCart('Crispy Kurkure Momos', 110)" class="w-full gradient-nature-btn text-black font-extrabold text-xs py-3.5 rounded-2xl hover:opacity-95 transition shadow-lg">
+            <i class="fa-solid fa-plus mr-1.5"></i> Add to Order Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="menu-card rolls glass-nature-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div>
+          <div class="h-52 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Paneer Tikka Roll" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-nature-dark/90 backdrop-blur-md text-amber-400 text-xs font-black px-3.5 py-1.5 rounded-xl border border-emerald-500/30 shadow-lg">₹130</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block mb-1">Rolls & Wraps</span>
+            <h3 class="font-extrabold text-lg text-white font-serif">Paneer Tikka Kathi Roll</h3>
+            <p class="text-xs text-zinc-300 mt-1.5 leading-relaxed">Grilled paneer cubes marinated in tandoori spices, wrapped in a soft flaky paratha.</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <button onclick="addToCart('Paneer Tikka Kathi Roll', 130)" class="w-full gradient-nature-btn text-black font-extrabold text-xs py-3.5 rounded-2xl hover:opacity-95 transition shadow-lg">
+            <i class="fa-solid fa-plus mr-1.5"></i> Add to Order Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="menu-card beverages glass-nature-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div>
+          <div class="h-52 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Brownie Thickshake" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-nature-dark/90 backdrop-blur-md text-amber-400 text-xs font-black px-3.5 py-1.5 rounded-xl border border-emerald-500/30 shadow-lg">₹150</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest block mb-1">Thick Shakes</span>
+            <h3 class="font-extrabold text-lg text-white font-serif">Chocolate Brownie Shake</h3>
+            <p class="text-xs text-zinc-300 mt-1.5 leading-relaxed">Rich chocolate ice cream blended with crushed baked brownie and chocolate fudge.</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <button onclick="addToCart('Chocolate Brownie Shake', 150)" class="w-full gradient-nature-btn text-black font-extrabold text-xs py-3.5 rounded-2xl hover:opacity-95 transition shadow-lg">
+            <i class="fa-solid fa-plus mr-1.5"></i> Add to Order Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="menu-card chinese glass-nature-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div>
+          <div class="h-52 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80" alt="Hakka Noodles" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-nature-dark/90 backdrop-blur-md text-amber-400 text-xs font-black px-3.5 py-1.5 rounded-xl border border-emerald-500/30 shadow-lg">₹140</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block mb-1">Chinese Corner</span>
+            <h3 class="font-extrabold text-lg text-white font-serif">Chilli Garlic Hakka Noodles</h3>
+            <p class="text-xs text-zinc-300 mt-1.5 leading-relaxed">Wok-tossed noodles cooked with garlic, red chillies, capsicum, and spring onions.</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <button onclick="addToCart('Chilli Garlic Hakka Noodles', 140)" class="w-full gradient-nature-btn text-black font-extrabold text-xs py-3.5 rounded-2xl hover:opacity-95 transition shadow-lg">
+            <i class="fa-solid fa-plus mr-1.5"></i> Add to Order Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="menu-card south glass-nature-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div>
+          <div class="h-52 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" alt="Steamed Idli Sambar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-nature-dark/90 backdrop-blur-md text-amber-400 text-xs font-black px-3.5 py-1.5 rounded-xl border border-emerald-500/30 shadow-lg">₹90</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block mb-1">South Special</span>
+            <h3 class="font-extrabold text-lg text-white font-serif">Steamed Idli Sambar (2 Pcs)</h3>
+            <p class="text-xs text-zinc-300 mt-1.5 leading-relaxed">Soft steamed rice cakes served hot with authentic Kerala style sambar & coconut chutney.</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <button onclick="addToCart('Steamed Idli Sambar', 90)" class="w-full gradient-nature-btn text-black font-extrabold text-xs py-3.5 rounded-2xl hover:opacity-95 transition shadow-lg">
+            <i class="fa-solid fa-plus mr-1.5"></i> Add to Order Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="menu-card fastfood glass-nature-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div>
+          <div class="h-52 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Crispy Veg Burger" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-nature-dark/90 backdrop-blur-md text-amber-400 text-xs font-black px-3.5 py-1.5 rounded-xl border border-emerald-500/30 shadow-lg">₹120</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest block mb-1">Burger & Fries</span>
+            <h3 class="font-extrabold text-lg text-white font-serif">Kerala Cafe Special Burger</h3>
+            <p class="text-xs text-zinc-300 mt-1.5 leading-relaxed">Golden veggie patty topped with fresh lettuce, onions & house mayo sauce.</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <button onclick="addToCart('Kerala Cafe Special Burger', 120)" class="w-full gradient-nature-btn text-black font-extrabold text-xs py-3.5 rounded-2xl hover:opacity-95 transition shadow-lg">
+            <i class="fa-solid fa-plus mr-1.5"></i> Add to Order Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="menu-card rolls glass-nature-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div>
+          <div class="h-52 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Cheese Pizza" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-nature-dark/90 backdrop-blur-md text-amber-400 text-xs font-black px-3.5 py-1.5 rounded-xl border border-emerald-500/30 shadow-lg">₹240</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block mb-1">Oven Baked</span>
+            <h3 class="font-extrabold text-lg text-white font-serif">Loaded Cheese Pizza</h3>
+            <p class="text-xs text-zinc-300 mt-1.5 leading-relaxed">Freshly baked pizza base loaded with melted mozzarella cheese & herbs.</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <button onclick="addToCart('Loaded Cheese Pizza', 240)" class="w-full gradient-nature-btn text-black font-extrabold text-xs py-3.5 rounded-2xl hover:opacity-95 transition shadow-lg">
+            <i class="fa-solid fa-plus mr-1.5"></i> Add to Order Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Item 9 -->
+      <div class="menu-card beverages glass-nature-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div>
+          <div class="h-52 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" alt="Masala Chai" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 right-4 bg-nature-dark/90 backdrop-blur-md text-amber-400 text-xs font-black px-3.5 py-1.5 rounded-xl border border-emerald-500/30 shadow-lg">₹30</span>
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest block mb-1">Hot Beverages</span>
+            <h3 class="font-extrabold text-lg text-white font-serif">Adrak & Cardamom Chai</h3>
+            <p class="text-xs text-zinc-300 mt-1.5 leading-relaxed">Special Indian tea brewed with fresh crushed ginger & aromatic cardamom.</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <button onclick="addToCart('Adrak Cardamom Chai', 30)" class="w-full gradient-nature-btn text-black font-extrabold text-xs py-3.5 rounded-2xl hover:opacity-95 transition shadow-lg">
+            <i class="fa-solid fa-plus mr-1.5"></i> Add to Order Cart
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OWNERS SPOTLIGHT SECTION -->
+  <section id="owners" class="py-16 px-4 max-w-7xl mx-auto">
+    <div class="glass-nature-card rounded-3xl p-10 border-amber-500/30 relative overflow-hidden shadow-2xl">
+      <div class="max-w-3xl mx-auto text-center space-y-4">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Leadership & Hospitality</span>
+        <h2 class="text-3xl font-extrabold font-serif text-white">Meet Our Founders</h2>
+        <p class="text-sm text-zinc-300 leading-relaxed">
+          Committed to delivering fresh ingredients, hygienic preparation, and warm hospitality in Nuh Mewat.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+          <div class="bg-emerald-950/90 p-6 rounded-2xl border border-emerald-500/30 text-center shadow-lg">
+            <div class="w-14 h-14 bg-amber-400/10 text-amber-400 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl shadow">
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <h3 class="font-extrabold text-lg text-white font-serif">Alkama Drwl</h3>
+            <p class="text-xs text-emerald-400 font-semibold mt-1">Co-Owner & Managing Director</p>
+          </div>
+          <div class="bg-emerald-950/90 p-6 rounded-2xl border border-emerald-500/30 text-center shadow-lg">
+            <div class="w-14 h-14 bg-emerald-400/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl shadow">
+              <i class="fa-solid fa-user-gear"></i>
+            </div>
+            <h3 class="font-extrabold text-lg text-white font-serif">Er. Saha Maluk Khan</h3>
+            <p class="text-xs text-amber-400 font-semibold mt-1">Co-Owner & Technical Director</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT & LOCATION SECTION -->
+  <section id="about" class="py-20 px-4 max-w-7xl mx-auto border-t border-white/10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Visit Us Today</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-white">Located Near Prayas Academy, Nuh</h2>
+        <p class="text-zinc-300 text-sm leading-relaxed">
+          Whether you're stopping by for a study break or hanging out with friends, **Kerala Cafe** brings a relaxing nature-inspired ambiance with high-quality fast food and refreshing tea to Nuh, Mewat.
+        </p>
+        
+        <div class="glass-nature-card p-7 rounded-3xl border-amber-500/20 space-y-4 shadow-xl">
+          <h4 class="font-bold text-white text-base flex items-center gap-2 font-serif">
+            <i class="fa-solid fa-address-card text-amber-400"></i> Contact & Location Info
+          </h4>
+          
+          <div class="space-y-2.5 text-xs text-zinc-300">
+            <p class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-amber-400 mt-0.5 text-sm"></i>
+              <span><strong>Address:</strong> Near Prayas Academy, Main Road, Nuh, Mewat, Haryana - 122107</span>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <i class="fa-solid fa-phone text-amber-400 text-sm"></i>
+              <span><strong>Phone / WhatsApp:</strong> <a href="tel:9813632561" class="text-amber-300 font-bold hover:underline">9813632561</a></span>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <i class="fa-solid fa-envelope text-amber-400 text-sm"></i>
+              <span><strong>Email:</strong> <a href="mailto:sahirk4708@gmail.com" class="text-amber-300 hover:underline">sahirk4708@gmail.com</a></span>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <i class="fa-solid fa-user-gear text-amber-400 text-sm"></i>
+              <span><strong>Owners:</strong> Alkama Drwl & Er. Saha Maluk Khan</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative h-96 rounded-3xl overflow-hidden border border-emerald-500/30 glass-nature-card shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" alt="Cafe Interior Atmosphere" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANCED FULL DISPLAY CART & BILLING DRAWER -->
+  <div id="cart-drawer" class="fixed inset-y-0 right-0 z-50 w-full sm:w-[480px] bg-nature-dark border-l border-emerald-500/30 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+    
+    <!-- Drawer Header -->
+    <div class="p-6 border-b border-white/10 flex justify-between items-center bg-emerald-950/90 shadow">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-amber-400/10 text-amber-400 flex items-center justify-center text-lg">
+          <i class="fa-solid fa-receipt"></i>
+        </div>
+        <div>
+          <h3 class="font-extrabold text-base text-white font-serif">Checkout & Billing</h3>
+          <p class="text-[10px] text-emerald-400">Kerala Cafe Order Summary</p>
+        </div>
+      </div>
+      <button onclick="toggleCartDrawer()" class="text-zinc-400 hover:text-white p-2"><i class="fa-solid fa-xmark text-xl"></i></button>
+    </div>
+
+    <!-- Items & Billing Details Scrollable Section -->
+    <div class="p-6 space-y-6 overflow-y-auto flex-grow text-xs">
+      
+      <!-- Cart Items Container -->
+      <div>
+        <h4 class="font-bold text-amber-400 uppercase tracking-widest text-[10px] mb-3 flex items-center justify-between font-sans">
+          <span>Selected Menu Items</span>
+          <span id="cart-item-count-label" class="text-zinc-400 font-normal">0 Items</span>
+        </h4>
+        <div id="cart-items" class="space-y-3">
+          <p class="text-zinc-500 text-center py-8">Your shopping cart is currently empty.</p>
+        </div>
+      </div>
+
+      <!-- Home Delivery Options -->
+      <div class="bg-emerald-950/60 p-4 rounded-2xl border border-emerald-500/30 space-y-3 shadow-inner">
+        <h4 class="font-bold text-white text-xs flex items-center gap-2">
+          <i class="fa-solid fa-truck-fast text-amber-400"></i> Select Home Delivery Distance
+        </h4>
+        <div class="space-y-2 text-zinc-300">
+          <label class="flex items-center justify-between bg-black/50 p-3 rounded-xl border border-white/5 cursor-pointer hover:border-amber-400/50 transition">
+            <div class="flex items-center gap-2.5">
+              <input type="radio" name="delivery-distance" value="under5" checked onclick="calculateBill()" class="accent-amber-400 w-4 h-4">
+              <span class="font-medium">Under 5 km (Near Prayas Academy / Nuh Town)</span>
+            </div>
+            <span class="text-emerald-400 font-extrabold text-[11px] uppercase bg-emerald-950 px-2 py-1 rounded">FREE</span>
+          </label>
+          <label class="flex items-center justify-between bg-black/50 p-3 rounded-xl border border-white/5 cursor-pointer hover:border-amber-400/50 transition">
+            <div class="flex items-center gap-2.5">
+              <input type="radio" name="delivery-distance" value="5to10" onclick="calculateBill()" class="accent-amber-400 w-4 h-4">
+              <span class="font-medium">5 km to 10 km (Extended Area)</span>
+            </div>
+            <span class="text-amber-400 font-extrabold text-[11px] bg-amber-950 px-2 py-1 rounded">₹50 Charge</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Customer Details Form -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-white text-xs flex items-center gap-2">
+          <i class="fa-solid fa-user text-amber-400"></i> Delivery Address Details
+        </h4>
+        <input type="text" id="cust-name" placeholder="Your Name" class="w-full bg-black/50 border border-emerald-500/30 rounded-xl p-3 text-white placeholder-zinc-500 focus:outline-none focus:border-amber-400 transition">
+        <input type="tel" id="cust-phone" placeholder="Mobile Number (e.g. 9813...)" class="w-full bg-black/50 border border-emerald-500/30 rounded-xl p-3 text-white placeholder-zinc-500 focus:outline-none focus:border-amber-400 transition">
+        <textarea id="cust-address" rows="2" placeholder="Full Delivery Address (Near Prayas Academy, Nuh...)" class="w-full bg-black/50 border border-emerald-500/30 rounded-xl p-3 text-white placeholder-zinc-500 focus:outline-none focus:border-amber-400 transition"></textarea>
+      </div>
+
+      <!-- Full Billing Breakup Table -->
+      <div class="bg-black/70 p-5 rounded-2xl border border-white/10 space-y-2.5 font-mono text-xs shadow-xl">
+        <h4 class="font-bold font-sans text-amber-400 uppercase text-[10px] tracking-wider mb-3">Official Bill Breakdown</h4>
+        <div class="flex justify-between text-zinc-300">
+          <span>Items Subtotal:</span>
+          <span id="bill-subtotal" class="font-bold text-white">₹0</span>
+        </div>
+        <div class="flex justify-between text-zinc-300">
+          <span>Fixed Service Tax:</span>
+          <span class="font-bold text-emerald-400">₹5</span>
+        </div>
+        <div class="flex justify-between text-zinc-300">
+          <span>Home Delivery Charge:</span>
+          <span id="bill-delivery" class="font-bold text-emerald-400">FREE</span>
+        </div>
+        <div class="border-t border-zinc-700 my-2 pt-2.5 flex justify-between text-white font-sans text-sm font-black">
+          <span>Grand Total Amount:</span>
+          <span id="bill-grandtotal" class="text-amber-400 text-base">₹5</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer Actions -->
+    <div class="p-6 border-t border-white/10 bg-emerald-950/95 space-y-3 shadow-2xl">
+      <button onclick="confirmOrder()" class="w-full gradient-nature-btn text-black font-extrabold text-xs text-center py-4 rounded-2xl uppercase tracking-wider shadow-xl hover:opacity-95 transition">
+        <i class="fa-solid fa-paper-plane mr-2"></i> Place Order via Call (9813632561)
+      </button>
+      <p class="text-[10px] text-center text-zinc-400">Managed by Alkama Drwl & Er. Saha Maluk Khan</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-black/95 border-t border-white/10 pt-16 pb-10 px-4 text-xs text-zinc-400">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+      <div>
+        <span class="font-black text-2xl gradient-nature-text font-serif block mb-1">Kerala Cafe • Nuh</span>
+        <p class="text-zinc-400 text-xs">Near Prayas Academy, Nuh, Mewat, Haryana 122107 | Hotline: 9813632561</p>
+        <p class="text-zinc-500 text-[11px] mt-1">Founders: Alkama Drwl & Er. Saha Maluk Khan | Email: sahirk4708@gmail.com</p>
+      </div>
+      <p class="text-zinc-500 text-[11px]">Copyright © Kerala Cafe Nuh 2026. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    let cart = [];
+
+    function toggleCartDrawer() {
+      const drawer = document.getElementById('cart-drawer');
+      drawer.classList.toggle('translate-x-full');
+    }
+
+    function addToCart(name, price) {
+      const existingItem = cart.find(item => item.name === name);
+      if (existingItem) {
+        existingItem.qty += 1;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+      updateCartUI();
+      toggleCartDrawer();
+    }
+
+    function changeQty(index, change) {
+      cart[index].qty += change;
+      if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const cartBadge = document.getElementById('cart-badge');
+      const cartItems = document.getElementById('cart-items');
+      const itemCountLabel = document.getElementById('cart-item-count-label');
+
+      let totalItemsCount = cart.reduce((sum, item) => sum + item.qty, 0);
+      cartBadge.innerText = totalItemsCount;
+      itemCountLabel.innerText = `${totalItemsCount} Item(s)`;
+
+      if (cart.length === 0) {
+        cartItems.innerHTML = `<p class="text-zinc-500 text-center py-8">Your shopping cart is empty.</p>`;
+      } else {
+        cartItems.innerHTML = cart.map((item, index) => {
+          return `
+            <div class="flex justify-between items-center bg-white/5 p-3.5 rounded-2xl border border-white/5 shadow-sm">
+              <div class="pr-2">
+                <p class="font-bold text-white text-xs">${item.name}</p>
+                <p class="text-[11px] text-amber-400 font-semibold mt-0.5">₹${item.price} × ${item.qty} = ₹${item.price * item.qty}</p>
+              </div>
+              <div class="flex items-center gap-2 bg-black/70 rounded-xl px-2.5 py-1.5 border border-white/10 shadow">
+                <button onclick="changeQty(${index}, -1)" class="text-amber-400 hover:text-white font-bold text-xs px-1.5">-</button>
+                <span class="text-white text-xs font-bold">${item.qty}</span>
+                <button onclick="changeQty(${index}, 1)" class="text-amber-400 hover:text-white font-bold text-xs px-1.5">+</button>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      calculateBill();
+    }
+
+    function calculateBill() {
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      const tax = cart.length > 0 ? 5 : 0; // Flat ₹5 Tax
+      
+      const distanceRadio = document.querySelector('input[name="delivery-distance"]:checked');
+      let deliveryCharge = 0;
+      if (cart.length > 0 && distanceRadio && distanceRadio.value === '5to10') {
+        deliveryCharge = 50; // ₹50 for 5km to 10km
+      }
+
+      const grandTotal = subtotal + tax + deliveryCharge;
+
+      document.getElementById('bill-subtotal').innerText = `₹${subtotal}`;
+      document.getElementById('bill-delivery').innerText = deliveryCharge === 0 ? (cart.length > 0 ? 'FREE' : '₹0') : `₹${deliveryCharge}`;
+      document.getElementById('bill-grandtotal').innerText = `₹${grandTotal}`;
+    }
+
+    function confirmOrder() {
+      if (cart.length === 0) {
+        alert("Your cart is empty! Please add items to place an order.");
+        return;
+      }
+      const name = document.getElementById('cust-name').value || "Customer";
+      const phone = document.getElementById('cust-phone').value || "9813632561";
+      const grandTotal = document.getElementById('bill-grandtotal').innerText;
+
+      alert(`Thank you ${name}! Your order total is ${grandTotal}. Calling Kerala Cafe hotline (9813632561) to confirm your delivery near Prayas Academy, Nuh.`);
+      window.location.href = "tel:9813632561";
+    }
+
+    function filterCategory(category) {
+      // Highlight active category tab button
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.classList.remove('gradient-nature-btn', 'text-black', 'shadow');
+        btn.classList.add('glass-nature-card', 'text-zinc-300');
+      });
+      event.target.classList.remove('glass-nature-card', 'text-zinc-300');
+      event.target.classList.add('gradient-nature-btn', 'text-black', 'shadow');
+
+      const cards = document.querySelectorAll('.menu-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
